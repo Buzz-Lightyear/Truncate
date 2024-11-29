@@ -78,6 +78,18 @@ impl Caches {
 }
 
 impl Game {
+    pub fn srini_move(
+        game: &Game,
+        self_dictionary: Option<&WordDict>,
+        opponent_dictionary: Option<&WordDict>,
+        depth: usize,
+        counter: Option<&mut Arborist>,
+        log: bool,
+        npc_params: &NPCParams,
+    ) -> (PlayerMessage, BoardScore) {
+        Game::best_move(game, self_dictionary, opponent_dictionary, depth, counter, log, npc_params)
+    }
+
     pub fn best_move(
         game: &Game,
         self_dictionary: Option<&WordDict>,
