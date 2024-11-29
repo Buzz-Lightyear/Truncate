@@ -132,7 +132,7 @@ async fn main() -> anyhow::Result<()> {
             arb.capped(npc.params.evaluation_cap);
 
             println!("Got board!\n\n{}\n\nPLayer ID {}", game.board, player_id);
-            let (player_msg, _board_score) = Game::best_move(
+            let (player_msg, _board_score) = Game::srini_move(
                 &game,
                 Some(&dict),
                 Some(&dict),
