@@ -30,7 +30,7 @@ async fn main() -> anyhow::Result<()> {
         };
 
         // First request
-        let name = "Srini".to_string()
+        let name = "Srini".to_string();
         println!("Sending initial PlayGameRequest with player name: {}", name);
         yield PlayGameRequest{
             request_id: request_id(),
